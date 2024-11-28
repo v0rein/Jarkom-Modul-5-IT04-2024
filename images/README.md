@@ -223,3 +223,28 @@ up echo nameserver 192.168.122.1 > /etc/resolv.conf
 #A1
 post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.129
 ```
+
+## BalletTwins (DHCP Relay)
+```
+auto eth0
+iface eth0 inet static
+  address 10.72.0.11
+  netmask 255.255.255.248
+  gateway 10.72.0.9
+ 
+auto eth1
+iface eth1 inet static
+  address 10.72.0.129
+  netmask 255.255.255.128
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+ 
+#A2
+post-up route add -net 10.72.0.4 netmask 255.255.255.252 gw 10.72.0.9
+
+#A1
+post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.0.9
+
+#A7
+post-up  route add -net 10.72.2.8 netmask 255.255.255.248 gw 10.72.0.9
+```
