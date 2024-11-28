@@ -260,3 +260,28 @@ iface eth0 inet dhcp
 auto eth0
 iface eth0 inet dhcp 
 ```
+
+## ScootOutpost
+```
+auto eth0
+iface eth0 inet static
+  address 10.72.2.2
+  netmask 255.255.255.248
+  gateway 10.72.2.1
+
+auto eth1
+iface eth1 inet static
+  address 10.72.2.129
+  netmask 255.255.255.252
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A2
+post-up route add -net 10.72.0.4 netmask 255.255.255.252 gw 10.72.2.1
+
+#A8
+post-up route add -net 10.72.2.16 netmask 255.255.255.192 gw 10.72.2.3
+
+#A1
+post-up  route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.1
+```
