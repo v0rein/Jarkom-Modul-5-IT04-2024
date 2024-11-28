@@ -186,3 +186,40 @@ post-up route add -net 10.72.0.128 netmask 255.255.255.128 gw 10.72.0.11
 #A7
 post-up route add -net 10.72.2.8 netmask 255.255.255.248 gw 10.72.0.5
 ```
+
+## Jane (Client)
+```
+auto eth0
+iface eth0 inet dhcp
+```
+
+## Policeboo (Client)
+```
+auto eth0
+iface eth0 inet dhcp
+```
+
+## HIA (Web Server)
+```
+auto eth0
+iface eth0 inet static
+  address 10.72.0.10
+  netmask 255.255.255.248
+  gateway 10.72.0.9
+ 
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+## HollowZero (Web Server)
+```
+auto eth0
+iface eth0 inet static
+  address 10.72.2.130
+  netmask 255.255.255.252
+  gateway 10.72.2.129
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A1
+post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.129
+```
