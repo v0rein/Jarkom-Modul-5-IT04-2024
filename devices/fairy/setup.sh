@@ -7,4 +7,4 @@ echo INTERFACESv4=\"eth0\" >/etc/default/isc-dhcp-server
 service rsyslog start
 
 service isc-dhcp-server start
-iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+#iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
