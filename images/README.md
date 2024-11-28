@@ -156,3 +156,33 @@ post-up route add -net 10.72.2.128 netmask 255.255.255.252 gw 10.72.2.65
 #A1
 post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.65
 ```
+
+## LuminaSquare (DCHP Relay)
+```
+auto eth0
+iface eth0 inet static
+  address 10.72.0.6
+  netmask 255.255.255.252
+  gateway 10.72.0.5
+
+auto eth1
+iface eth1 inet static
+  address 10.72.0.9
+  netmask 255.255.255.248
+ 
+auto eth2
+iface eth2 inet static
+  address 10.72.1.1
+  netmask 255.255.255.0
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A1
+post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.0.5
+
+#A4
+post-up route add -net 10.72.0.128 netmask 255.255.255.128 gw 10.72.0.11
+
+#A7
+post-up route add -net 10.72.2.8 netmask 255.255.255.248 gw 10.72.0.5
+```
