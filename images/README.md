@@ -51,7 +51,7 @@ post-up route add -net 10.72.1.0 netmask 255.255.255.0 gw 10.72.0.6
 post-up route add -net 10.72.2.128 netmask 255.255.255.252 gw 10.72.0.2
 ```
 
-## SixStreet
+## SixStreet (DHCP Relay)
 ```
 auto eth0
 iface eth0 inet static
@@ -108,3 +108,51 @@ post-up route add -net 10.72.2.16 netmask 255.255.255.192 gw 10.72.2.9
 post-up route add -net 10.72.0.128 netmask 255.255.255.128 gw 10.72.2.9
 ```
 
+## OuterRing (DHCP Relay)
+```
+auto eth0
+iface eth0 inet static
+  address 10.72.2.3
+  netmask 255.255.255.248
+  gateway 10.72.2.1
+
+auto eth1
+iface eth1 inet static
+  address 10.72.2.65
+  netmask 255.255.255.192
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A9
+post-up route add -net 10.72.2.128 netmask 255.255.255.252 gw 10.72.2.2
+
+#A1
+post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.1
+
+#A7
+post-up route add -net 10.72.2.8 netmask 255.255.255.248 gw 10.72.2.1
+```
+
+## Burnice (Client)
+```
+auto eth0
+iface eth0 inet dhcp
+
+#Hollowzero
+post-up route add -net 10.72.2.128 netmask 255.255.255.252 gw 10.72.2.65
+
+#A1
+post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.65
+```
+
+## Caesar (Client)
+```
+auto eth0
+iface eth0 inet dhcp
+
+#Hollowzero
+post-up route add -net 10.72.2.128 netmask 255.255.255.252 gw 10.72.2.65
+
+#A1
+post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.65
+```
