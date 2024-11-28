@@ -248,3 +248,15 @@ post-up route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.0.9
 #A7
 post-up  route add -net 10.72.2.8 netmask 255.255.255.248 gw 10.72.0.9
 ```
+
+## Ellen (Client)
+```
+auto eth0
+iface eth0 inet dhcp 
+```
+
+## Lycaon (Client)
+```
+auto eth0
+iface eth0 inet dhcp 
+```
