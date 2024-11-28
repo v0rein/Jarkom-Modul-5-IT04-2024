@@ -1,0 +1,1 @@
+readme asli ada di images, masih on progress soalnya

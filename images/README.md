@@ -315,4 +315,5 @@ Disini tutorial buat config DHCPnya OuterRing dulu
 trus coba liat juga di web console Fairy
 `tail -f /var/log/syslog`
 ![alt text](image-9.png)
+disini keliatan ada log ip 10.72.2.69 berhasil di lease ke Caesar
 8. Kalo kyk gini udah bener berarti DHCPnya
