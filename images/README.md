@@ -1,11 +1,17 @@
 # DOKUMENTASI JARKOM PRAKTIKUM 5
 
+## BLOM SELESAI
+
 ## ANGGOTA
 
 | Nama                        | NRP        |
 | --------------------------- | ---------- |
 | Athalla Barka Fadhil        | 5027231018 |
 | Jody Hezekiah Tanasa Sagala | 5027221050 |
+
+## NOTES
+Config ada di folder devices, tinggal masukin aja semuanya ke /root
+kalo gaada confignya di folder devices, berarti emg gaada confignya
 
 ## TOPOLOGY
 ![alt text](image-1.png)
