@@ -328,3 +328,14 @@ trus coba liat juga di web console Fairy
 ![alt text](image-9.png)
 disini keliatan ada log ip 10.72.2.69 berhasil di lease ke Caesar
 8. Kalo kyk gini udah bener berarti DHCPnya
+
+## NO 2 FAIRY
+1. web console Fairy trus cat setup.sh
+copy yang command iptables paling bawah
+![alt text](image-16.png)
+2. cek iptables dulu (blom ada apa2)
+![alt text](image-17.png)
+
+3.![alt text](image-19.png)
+`iptables -A INPUT -p icmp --icmp-type echo-request -j DROP`
+ ![alt text](image-18.png)
