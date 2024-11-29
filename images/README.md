@@ -339,3 +339,8 @@ copy yang command iptables paling bawah
 3.![alt text](image-19.png)
 `iptables -A INPUT -p icmp --icmp-type echo-request -j DROP`
  ![alt text](image-18.png)
+
+ 4. fairy bisa ping ScootOutpost (10.72.2.129)
+  ![alt text](image-22.png)
+  tapi ScootOutpost gabisa ping fairy (10.72.2.11)
+  ![alt text](image-23.png)
