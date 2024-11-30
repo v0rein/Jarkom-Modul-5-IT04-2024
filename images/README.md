@@ -381,6 +381,12 @@ copy
 tapi nodes lain gabisa ping ke HDD
 ![alt text](image-31.png)
 
+7. test pake netcat 
+![alt text](image-45.png)
+![alt text](image-48.png)
+![alt text](image-46.png)
+terlihat bahwa fairy bisa ping nc tapi yang lain gabisa ping nc
+
 ## NO 4 HollowZero
 1. masuk web console HollowZero trus run setup.sh
 ![alt text](image-32.png)
