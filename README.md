@@ -296,10 +296,11 @@ post-up  route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.1
 1. UDAH SUBNET DAN SUDAH ROUTING DAN UDAH BISA PING KE SEMUA NODES BARU LANJUT CONFIG 
 2. Setup nameserver 192.168.122.1nya, masuk web console NewEridu trus run setup.sh
 ![alt text](images/image-10.png)
+
 jangan lupa buat setiap nodes harus ada nameserver kyk dibawah ini
 ![alt text](images/image-11.png)
 
-3. coba ping x.com dari NewEridu,SixStreet, OuterRing, Fairy
+4. coba ping x.com dari NewEridu,SixStreet, OuterRing, Fairy
 ![alt text](images/image-12.png)
 ![alt text](images/image-14.png)
 ![alt text](images/image-13.png)
