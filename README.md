@@ -305,7 +305,11 @@ jangan lupa buat setiap nodes harus ada nameserver kyk dibawah ini
 ![alt text](images/image-14.png)
 ![alt text](images/image-13.png)
 ## CONFIG DHCP
-Disini tutorial buat config DHCPnya OuterRing dulu
+Disini tutorial buat config DHCP 
+
+1. Jangan lupa buat ganti IP di `isc-dhcp-relay` ini pake IP dari DHCP Server (Fairy)
+untuk `isc-dhcp-relay` itu sama semua untuk OuterRing, SixStreet, LuminaSquare, BalletTwins
+![alt text](images/image-77.png)
 1. Copy config dari folder devices buat NewEridu, SixStreet, OuterRing, Fairy
 2. Masuk ke web console Fairy trus run setup.sh
 ![alt text](images/image-2.png)
@@ -318,8 +322,7 @@ Disini tutorial buat config DHCPnya OuterRing dulu
 ![alt text](images/image-4.png)
 ![alt text](images/image-15.png)
 
-5. Jangan lupa buat ganti IP dibawah ini pake IP dari DHCP Server (Fairy)
-![alt text](images/image-5.png)
+
 6. Coba masuk web console Fairy trus coba
 `service isc-dhcp-server restart`
 ![alt text](images/image-6.png)
