@@ -1,9 +1,8 @@
 export DEBIAN_FRONTEND=noninteractive
 apt update
-apt install lynx apache2 -y
+apt install apache2 -y
 cp ~/index.html /var/www/html/index.html
 cp ~/000-default.conf /etc/apache2/sites-available/000-default.conf
-a2enmod include
 service apache2 restart
 
 #iptables -P INPUT DROP
