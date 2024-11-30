@@ -446,6 +446,9 @@ curl jg gabisa
 run iptables yang bawah "Allow 2 active connections"
 ![alt text](images/image-64.png)
 2. coba testing pake parallel di client bebas, antara Caesar, Burnice, Jane atau Policeboo
+dan jangan lupa buat install parallel dulu
+`apt update`
+`apt install parallel -y`
 ![alt text](images/image-62.png)
 untuk ip disini
 `parallel curl -s IP_HOLLOWZER ::: IPCAESAR IPBURNICE IPJANE IPPOLICEBOO`
