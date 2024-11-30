@@ -392,7 +392,7 @@ terlihat bahwa fairy bisa ping nc tapi yang lain gabisa ping nc
 ![alt text](image-32.png)
 
 2. trus cek buat nyoba webservernya
-![alt text](image-33.png)
+![alt text](image-50.png)
 
 3. cek command iptables paling bawah
 ![alt text](image-34.png)
@@ -412,13 +412,12 @@ kita allow hari sabtu
 ![alt text](image-38.png)
 
 7. Caesar bisa ping dan curl ke HollowZero
-![alt text](image-39.png)
-
+![alt text](image-49.png)
 ## NO 5 HIA
 1. web console HIA trus run setup.sh
 ![alt text](image-40.png)
 2. cek buat nyoba webservernya
-![alt text](image-41.png)
+![alt text](image-52.png)
 3. jalanin iptables dibawah
 ![alt text](image-42.png)
 4. 
@@ -426,5 +425,5 @@ kita allow hari sabtu
     b. `iptables -A INPUT -s 10.72.0.128/25 -m time --timestart 08:00 --timestop 21:00 -j ACCEPT`
     c. `iptables -A INPUT -s 10.72.1.0/24 -m time --timestart 03:00 --timestop 23:00 -j ACCEPT`
 ![alt text](image-43.png)
-5. Lycaon bisa akses karena sekarang jam 10:25
-![alt text](image-44.png)
+5. Lycaon bisa akses karena sekarang masih masuk kedalam waktu yang diperbolehkan
+![alt text](image-51.png)
