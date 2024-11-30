@@ -300,42 +300,35 @@ post-up  route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.1
 
 ![alt text](image-10.png)
 jangan lupa buat setiap nodes harus ada nameserver kyk dibawah ini
-
 ![alt text](image-11.png)
-3. coba ping x.com dari NewEridu,SixStreet, OuterRing, Fairy
 
-4. ![alt text](image-12.png)
+3. coba ping x.com dari NewEridu,SixStreet, OuterRing, Fairy
+![alt text](image-12.png)
 ![alt text](image-14.png)
 ![alt text](image-13.png)
 ## CONFIG DHCP
 Disini tutorial buat config DHCPnya OuterRing dulu
 1. Copy config dari folder devices buat NewEridu, SixStreet, OuterRing, Fairy
 2. Masuk ke web console Fairy trus run setup.sh
-
 ![alt text](image-2.png)
-3. Masuk web console SixStreet trus run setup.sh
 
+3. Masuk web console SixStreet trus run setup.sh trus biar pasti, run `service isc-dhcp-relay restart`
 ![alt text](image-3.png)
-biar pasti, run `service isc-dhcp-relay restart`
-4. Masuk web console OuterRing trus run setup.sh
 
+
+4. Masuk web console OuterRing trus run setup.sh trus biar pasti, run `service isc-dhcp-relay restart`
 ![alt text](image-4.png)
-biar pasti, run `service isc-dhcp-relay restart`
-
 ![alt text](image-15.png)
-5. Jangan lupa buat ganti IP dibawah ini pake IP dari DHCP Server (Fairy)
 
+5. Jangan lupa buat ganti IP dibawah ini pake IP dari DHCP Server (Fairy)
 ![alt text](image-5.png)
 6. Coba masuk web console Fairy trus coba
 `service isc-dhcp-server restart`
-
 ![alt text](image-6.png)
 7. Coba restart clientnya, di stop trus start lagi misal si Caesar trus masuk web consolenya
 ![alt text](image-8.png)
-
 trus coba liat juga di web console Fairy
 `tail -f /var/log/syslog`
-
 ![alt text](image-9.png)
 disini keliatan ada log ip 10.72.2.69 berhasil di lease ke Caesar
 8. Kalo kyk gini udah bener berarti DHCPnya
