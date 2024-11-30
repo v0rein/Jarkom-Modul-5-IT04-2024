@@ -331,9 +331,6 @@ trus coba liat juga di web console Fairy
 disini keliatan ada log ip 10.72.2.69 berhasil di lease ke Caesar
 8. Kalo kyk gini udah bener berarti DHCPnya
 
-## CONFIG WEB SERVER
-1. copy config dari folder devices buat 
-
 ## NO 2 FAIRY
 1. web console Fairy trus cat setup.sh
 copy yang command iptables paling bawah
@@ -356,7 +353,8 @@ copy yang command iptables paling bawah
 ## NO 3 HDD
 pasitiin HDD ini bisa ping ke semua nodes 
 
-1. web console HDD trus cat setup.sh
+1. web console HDD trus run setup.sh
+
 ![alt text](images/image-25.png)
 
 2. liat command iptables dipaling bawah
