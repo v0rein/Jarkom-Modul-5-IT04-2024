@@ -333,6 +333,7 @@ trus coba liat juga di web console Fairy
 ![alt text](images/image-9.png)
 disini keliatan ada log ip 10.72.2.69 berhasil di lease ke Caesar
 8. Kalo kyk gini udah bener berarti DHCPnya
+buat DHCP client yang lain juga sama, relaynya direstart dulu, trus clientnya juga direstart (stop trus start) nanti bakal ada log lease sama kyk di caesar
 
 ## NO 2 FAIRY
 1. web console Fairy trus cat setup.sh
