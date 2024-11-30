@@ -295,11 +295,11 @@ post-up  route add -net 10.72.0.0 netmask 255.255.255.252 gw 10.72.2.1
 # TUTORIAL
 ## PREREQUESITE
 
-1. UDAH SUBNET DAN SUDAH ROUTING BARU LANJUT CONFIG
-2. Setup DNS 192.168.122.1nya, masuk web console NewEridu trus run setup.sh
+1. UDAH SUBNET DAN SUDAH ROUTING DAN UDAH BISA PING KE SEMUA NODES BARU LANJUT CONFIG 
+2. Setup nameserver 192.168.122.1nya, masuk web console NewEridu trus run setup.sh
 
 ![alt text](image-10.png)
-jangan lupa buat setiap nodes harus ada dns kyk dibawah ini
+jangan lupa buat setiap nodes harus ada nameserver kyk dibawah ini
 
 ![alt text](image-11.png)
 3. coba ping x.com dari NewEridu,SixStreet, OuterRing, Fairy
@@ -357,8 +357,35 @@ copy yang command iptables paling bawah
  ![alt text](image-18.png)
 
  4. fairy bisa ping ScootOutpost (10.72.2.129)
-
   ![alt text](image-22.png)
+
   tapi ScootOutpost gabisa ping fairy (10.72.2.11)
-  
   ![alt text](image-23.png)
+
+## NO 3 HDD
+pasitiin HDD ini bisa ping ke semua nodes 
+1. web console HDD trus cat setup.sh
+copy
+![alt text](image-25.png)
+
+2. liat command iptables dipaling bawah
+![alt text](image-26.png)
+
+3. cek aturan sekarang (blom ada apa2) 
+`iptables -L INPUT -n --line-numbers`
+![alt text](image-27.png)
+
+4. Bikin aturan untuk blok semua request 
+`iptables -A INPUT DROP`
+![alt text](image-28.png)
+
+5. lalu buat aturan agar hanya Fairy (10.72.2.11) yang bisa akses
+`iptables -A INPUT -s 10.72.2.11 -j ACCEPT`
+![alt text](image-29.png)
+
+6. fairy bisa ping ke HDD
+![alt text](image-30.png)
+tapi nodes lain gabisa ping ke HDD
+![alt text](image-31.png)
+
+
