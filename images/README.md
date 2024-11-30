@@ -388,4 +388,29 @@ copy
 tapi nodes lain gabisa ping ke HDD
 ![alt text](image-31.png)
 
+## NO 4 HollowZero
+1. masuk web console HollowZero trus run setup.sh
+![alt text](image-32.png)
 
+2. trus cek buat nyoba webservernya
+![alt text](image-33.png)
+
+3. cek command iptables paling bawah
+![alt text](image-34.png)
+
+4. `date` buat liat tanggal sekarang, trus jalanin 3 command iptables dibawah
+  ![alt text](image-35.png)
+
+5. Caesar ga bisa ping ke HollowZero soalnya sekarang hari sabtu 
+![alt text](image-36.png)
+
+6. ganti aturan agar sabtu bisa diakses
+![alt text](image-37.png)
+drop aturan no 2 (yang 10.72.2.64 pokoknya)
+`iptables -D INPUT 2`
+`iptables -A INPUT -s 10.72.2.64/26 -m time --weekdays Sat -j ACCEPT`
+kita allow hari sabtu
+![alt text](image-38.png)
+
+7. Caesar bisa ping dan curl ke HollowZero
+![alt text](image-39.png)
