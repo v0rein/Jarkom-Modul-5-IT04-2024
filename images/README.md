@@ -427,3 +427,17 @@ kita allow hari sabtu
 ![alt text](image-43.png)
 5. Lycaon bisa akses karena sekarang masih masuk kedalam waktu yang diperbolehkan
 ![alt text](image-51.png)
+
+## NO 6 HIA PORTSCAN
+1. masuk web console HIA trus cat setup.sh
+run iptables dari "Create a chain for handling port scanning"
+![alt text](image-53.png)
+2. cek web console policeboo trus ping sama curl ke HIA
+![alt text](image-54.png)
+![alt text](image-58.png)
+masih bisa kan, coba kita nmap ke HIA
+![alt text](image-55.png)
+![alt text](image-56.png)
+gabisa ping
+![alt text](image-57.png)
+curl jg gabisa
