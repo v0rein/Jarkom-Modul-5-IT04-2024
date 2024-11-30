@@ -344,9 +344,10 @@ copy yang command iptables paling bawah
 ![alt text](images/image-24.png)
 
 
-3. ![alt text](images/image-19.png)
+3. run command ini
 `iptables -A INPUT -p icmp --icmp-type echo-request -j DROP`
- ![alt text](images/image-18.png)
+nanti dia bakal muncul di iptables
+![alt text](image.png)
 
  4. fairy bisa ping ScootOutpost (10.72.2.129)
   ![alt text](images/image-22.png)
