@@ -15,12 +15,13 @@ service apache2 restart
 iptables -N PORTSCAN
 
 #Detect and handle new connections to ports 1-100
+iptables -I INPUT 1 -j LOG --log-prefix "PORT SCAN BRO: " --log-level 4 --log-tcp-options --log-ip-options
 iptables -A INPUT -p tcp --dport 1:100 -m state --state NEW -m recent --set --name portscan
 iptables -A INPUT -p tcp --dport 1:100 -m state --state NEW -m recent --update --seconds 10 --hitcount 25 --name portscan -j PORTSCAN
 
 #Log and block port-scanning IPs
 iptables -A PORTSCAN -m recent --set --name blacklist
-iptables -I PORTSCAN 1 -j LOG --log-prefix "PORT SCAN DETECTED: " --log-level 7
+iptables -I PORTSCAN 1 -j LOG --log-prefix "PORT SCAN DETECTED: " --log-level 4 --log-tcp-options --log-ip-options
 iptables -A PORTSCAN -j DROP
 
 #Block all further traffic from blacklisted IPs

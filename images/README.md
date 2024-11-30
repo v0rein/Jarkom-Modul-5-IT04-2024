@@ -441,3 +441,28 @@ masih bisa kan, coba kita nmap ke HIA
 gabisa ping
 ![alt text](image-57.png)
 curl jg gabisa
+
+## NO 7 HollowZero
+1. Masuk web console HollowZero trus cat setup.sh
+![alt text](image-63.png)
+run iptables yang bawah "Allow 2 active connections"
+![alt text](image-64.png)
+2. coba testing pake parallel di client bebas, antara Caesar, Burnice, Jane atau Policeboo
+![alt text](image-62.png)
+untuk ip disini
+`parallel curl -s IP_HOLLOWZER ::: IPCAESAR IPBURNICE IPJANE IPPOLICEBOO`
+terlihat kalo hanya 2 koneksi yang bisa akses curl
+
+## NO 8 Burnice
+1. masuk web console Burnice trus run setup.sh
+![alt text](image-65.png)
+cek juga ip dari burnice disini ipnya 10.72.2.67
+liat di bagian inet
+![alt text](image-67.png)
+2. di hollowzero coba listen nc port 12345
+`nc -l -p 12345`
+![alt text](image-66.png)
+3. di fairy kita netcat ke Burnice
+![alt text](image-68.png)
+4. nanti hollowzero yang akan mendapat messagenya bukan burnice
+![alt text](image-69.png)
