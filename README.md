@@ -355,8 +355,8 @@ copy yang command iptables paling bawah
 
 ## NO 3 HDD
 pasitiin HDD ini bisa ping ke semua nodes 
+
 1. web console HDD trus cat setup.sh
-copy
 ![alt text](images/image-25.png)
 
 2. liat command iptables dipaling bawah
