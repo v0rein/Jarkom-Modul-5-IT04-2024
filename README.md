@@ -1,7 +1,5 @@
 # DOKUMENTASI JARKOM PRAKTIKUM 5
 
-## BLOM SELESAI
-
 ## ANGGOTA
 
 | Nama                        | NRP        |
