@@ -484,6 +484,6 @@ liat di bagian inet
 ![alt text](images/image-75.png)
 
 8. test ping
-![alt text](image.png)
+![alt text](images/image-76.png)
 gabisa di ping
 selesai 
