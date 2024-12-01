@@ -10,5 +10,5 @@ service isc-dhcp-server start
 #iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
 
 # Redirect all http connections to hollowzero
-iptables -t nat -A PREROUTING -p tcp --dport http -j DNAT --to-destination 10.72.2.130
-iptables -t nat -A POSTROUTING -p tcp --dport http -j MASQUERADE
+#iptables -t nat -A PREROUTING -p tcp --dport http -j DNAT --to-destination 10.72.2.130
+#iptables -t nat -A POSTROUTING -p tcp --dport http -j MASQUERADE
