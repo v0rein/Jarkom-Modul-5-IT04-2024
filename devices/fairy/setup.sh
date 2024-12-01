@@ -8,4 +8,3 @@ service rsyslog start
 
 service isc-dhcp-server start
 #iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
-

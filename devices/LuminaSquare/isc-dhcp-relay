@@ -7,7 +7,7 @@
 #
 
 # What servers should the DHCP relay forward requests to?
-SERVERS="10.72.2.11"
+SERVERS="192.235.2.11"
 
 # On what interfaces should the DHCP relay (dhrelay) serve DHCP requests?
 INTERFACES="eth0 eth1 eth2 eth3"

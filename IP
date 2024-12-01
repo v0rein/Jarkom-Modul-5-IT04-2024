@@ -1,0 +1,218 @@
+##NewEridu
+auto eth0
+iface eth0 inet dhcp
+
+auto eth2
+iface eth2 inet static
+  address 192.235.0.1
+  netmask 255.255.255.252
+  
+auto eth1
+iface eth1 inet static
+  address 192.235.0.5
+  netmask 255.255.255.252
+
+#A6
+post-up route add -net 192.235.2.0 netmask 255.255.255.248 gw 192.235.0.2
+
+#A3
+post-up route add -net 192.235.0.8 netmask 255.255.255.248 gw 192.235.0.6
+
+#A8
+post-up route add -net 192.235.2.64 netmask 255.255.255.192 gw 192.235.0.2
+
+#A7
+post-up route add -net 192.235.2.8 netmask 255.255.255.248 gw 192.235.0.2
+
+#A4
+post-up route add -net 192.235.0.128 netmask 255.255.255.128 gw 192.235.0.6
+
+#A5
+post-up route add -net 192.235.1.0 netmask 255.255.255.0 gw 192.235.0.6
+
+#A9
+post-up route add -net 192.235.2.128 netmask 255.255.255.252 gw 192.235.0.2
+
+##SixStreet
+auto eth0
+iface eth0 inet static
+  address 192.235.0.2
+  netmask 255.255.255.252
+  gateway 192.235.0.1
+
+auto eth1
+iface eth1 inet static
+  address 192.235.2.1
+  netmask 255.255.255.248
+
+auto eth2
+iface eth2 inet static
+  address 192.235.2.9
+  netmask 255.255.255.248
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A8
+post-up route add -net 192.235.2.64 netmask 255.255.255.192 gw 192.235.2.3
+
+#A9
+post-up route add -net 192.235.2.128 netmask 255.255.255.252 gw 192.235.2.2
+
+#A4
+post-up route add -net 192.235.0.128 netmask 255.255.255.128 gw 192.235.0.1
+
+##HDD
+auto eth0
+iface eth0 inet static
+  address 192.235.2.10
+  netmask 255.255.255.248
+  gateway 192.235.2.9
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+##Fairy
+auto eth0
+iface eth0 inet static
+  address 192.235.2.11
+  netmask 255.255.255.248
+  gateway 192.235.2.9
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A8
+post-up route add -net 192.235.2.16 netmask 255.255.255.192 gw 192.235.2.9
+
+#A4
+post-up route add -net 192.235.0.128 netmask 255.255.255.128 gw 192.235.2.9
+
+##OuterRing
+auto eth0
+iface eth0 inet static
+  address 192.235.2.3
+  netmask 255.255.255.248
+  gateway 192.235.2.1
+
+auto eth1
+iface eth1 inet static
+  address 192.235.2.65
+  netmask 255.255.255.192
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A9
+post-up route add -net 192.235.2.128 netmask 255.255.255.252 gw 192.235.2.2
+
+#A1
+post-up route add -net 192.235.0.0 netmask 255.255.255.252 gw 192.235.2.1
+
+#A7
+post-up route add -net 192.235.2.8 netmask 255.255.255.248 gw 192.235.2.1
+
+##Burnice, Caesar
+auto eth0
+iface eth0 inet dhcp
+
+#Hollowzero
+post-up route add -net 192.235.2.128 netmask 255.255.255.252 gw 192.235.2.65
+
+#A1
+post-up route add -net 192.235.0.0 netmask 255.255.255.252 gw 192.235.2.65
+
+##LuminaSquare
+auto eth0
+iface eth0 inet static
+  address 192.235.0.6
+  netmask 255.255.255.252
+  gateway 192.235.0.5
+
+auto eth1
+iface eth1 inet static
+  address 192.235.0.9
+  netmask 255.255.255.248
+ 
+auto eth2
+iface eth2 inet static
+  address 192.235.1.1
+  netmask 255.255.255.0
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A1
+post-up route add -net 192.235.0.0 netmask 255.255.255.252 gw 192.235.0.5
+
+#A4
+post-up route add -net 192.235.0.128 netmask 255.255.255.128 gw 192.235.0.11
+
+#A7
+post-up route add -net 192.235.2.8 netmask 255.255.255.248 gw 192.235.0.5
+
+#Jane, Policeboo, Ellen, Lycaon
+auto eth0
+iface eth0 inet dhcp
+
+##HIA
+auto eth0
+iface eth0 inet static
+  address 192.235.0.10
+  netmask 255.255.255.248
+  gateway 192.235.0.9
+ 
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+##Hollowzero
+auto eth0
+iface eth0 inet static
+  address 192.235.2.130
+  netmask 255.255.255.252
+  gateway 192.235.2.129
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A1
+post-up route add -net 192.235.0.0 netmask 255.255.255.252 gw 192.235.2.129
+
+##BalletTwins
+auto eth0
+iface eth0 inet static
+  address 192.235.0.11
+  netmask 255.255.255.248
+  gateway 192.235.0.9
+ 
+auto eth1
+iface eth1 inet static
+  address 192.235.0.129
+  netmask 255.255.255.128
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+ 
+#A2
+post-up route add -net 192.235.0.4 netmask 255.255.255.252 gw 192.235.0.9
+
+#A1
+post-up route add -net 192.235.0.0 netmask 255.255.255.252 gw 192.235.0.9
+
+#A7
+post-up  route add -net 192.235.2.8 netmask 255.255.255.248 gw 192.235.0.9
+
+##ScootOutpost
+auto eth0
+iface eth0 inet static
+  address 192.235.2.2
+  netmask 255.255.255.248
+  gateway 192.235.2.1
+
+auto eth1
+iface eth1 inet static
+  address 192.235.2.129
+  netmask 255.255.255.252
+
+up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+#A2
+post-up route add -net 192.235.0.4 netmask 255.255.255.252 gw 192.235.2.1
+
+#A8
+post-up route add -net 192.235.2.16 netmask 255.255.255.192 gw 192.235.2.3
+
+#A1
+post-up  route add -net 192.235.0.0 netmask 255.255.255.252 gw 192.235.2.1
