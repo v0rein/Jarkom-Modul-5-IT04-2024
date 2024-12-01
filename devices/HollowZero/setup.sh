@@ -6,6 +6,7 @@ cp ~/000-default.conf /etc/apache2/sites-available/000-default.conf
 service apache2 restart
 
 #iptables -P INPUT DROP
+#iptables -A INPUT -s 192.235.2.64/26 -m time --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
 #iptables -A INPUT -s 192.235.2.64/26 -m time --weekdays Sun -j ACCEPT
 #iptables -A INPUT -s 192.235.1.0/24 -m time --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
 
